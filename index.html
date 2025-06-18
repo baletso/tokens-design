@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Tu Sorpresa!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #F0F0F0;
+            text-align: center;
+        }
+        .message {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .circle-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8em;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            animation: fadeIn 1s ease-out;
+        }
+        /* Definiciones de colores para los círculos */
+        .red { background-color: #E74C3C; } /* Rojo */
+        .blue { background-color: #3498DB; } /* Azul */
+        .green { background-color: #2ECC71; } /* Verde */
+        .yellow { background-color: #F1C40F; } /* Amarillo */
+        .white { background-color: #ECF0F1; color: #333; } /* Blanco (con texto oscuro para contraste) */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        ¡Escanea el QR y obtendrás una sorpresa!
+    </div>
+    <div id="resultCircle" class="circle-container"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const colors = [
+                { name: 'Círculo Rojo', class: 'red' },
+                { name: 'Círculo Azul', class: 'blue' },
+                { name: 'Círculo Verde', class: 'green' },
+                { name: 'Círculo Amarillo', class: 'yellow' },
+                { name: 'Círculo Blanco', class: 'white' }
+            ];
+            const resultCircle = document.getElementById('resultCircle');
+            // Selecciona un color aleatorio
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            const selectedColor = colors[randomIndex];
+            // Aplica la clase de color y el texto al círculo
+            resultCircle.classList.add(selectedColor.class);
+            resultCircle.textContent = selectedColor.name;
+        });
+    </script>
+</body>
+</html>
