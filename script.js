@@ -1,11 +1,11 @@
 const imageUrls = [
-    "semillas/tarjeta-amarillo.png", // Asumiendo que esta imagen está en la carpeta 'images' dentro de tu repositorio
-    "semillas/tarjeta-azul.png",
-    "semillas/tarjeta-overpass-1.png",
-    "semillas/tarjeta-overpass-2.png",
-    "semillas/tarjeta-overpass.png",
-    "semillas/tarjeta-rojo.png",
-    "semillas/tarjeta-verde.png"
+    "images/tarjeta-amarillo.png", // Asumiendo que esta imagen está en la carpeta 'images' dentro de tu repositorio
+    "images/tarjeta-azul.png",
+    "images/tarjeta-overpass-1.png",
+    "images/tarjeta-overpass-2.png",
+    "images/tarjeta-overpass.png",
+    "images/tarjeta-rojo.png",
+    "images/tarjeta-verde.png"
     // ... y así sucesivamente para todas tus imágenes
 ];
 
