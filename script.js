@@ -1,11 +1,12 @@
 const imageUrls = [
-    "semillas/tarjeta-verde.png",
-    "semillas/tarjeta-verde.png",
-    "semillas/tarjeta-verde.png",
-    "semillas/tarjeta-verde.png",
-    "semillas/tarjeta-verde.png",
-    "semillas/tarjeta-verde.png",
-    "semillas/tarjeta-verde.png",
+    "semillas/tarjeta-amarillo.png", // Asumiendo que esta imagen está en la carpeta 'images' dentro de tu repositorio
+    "semillas/tarjeta-azul.png",
+    "semillas/tarjeta-overpass-1.png",
+    "semillas/tarjeta-overpass-2.png",
+    "semillas/tarjeta-overpass.png",
+    "semillas/tarjeta-rojo.png",
+    "semillas/tarjeta-verde.png"
+    // ... y así sucesivamente para todas tus imágenes
 ];
 
 function displayRandomImage() {
@@ -14,5 +15,4 @@ function displayRandomImage() {
     document.getElementById('randomImage').src = selectedImageUrl;
 }
 
-// Llama a la función cuando la página se carga
 window.onload = displayRandomImage;
